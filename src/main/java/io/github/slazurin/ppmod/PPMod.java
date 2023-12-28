@@ -1,4 +1,4 @@
-package com.example.ppmod;
+package io.github.slazurin.ppmod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
