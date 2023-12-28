@@ -14,7 +14,7 @@ apply plugin: 'maven-publish'
 
 version = '1.16-1.0.0.0'
 group = 'io.github.slazurin.ppmod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+archivesBaseName = 'ppmod'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 
@@ -53,6 +53,19 @@ minecraft {
             // You can set various levels here.
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
+
+            if (project.hasProperty("uuid")) {
+                args '--uuid', project.property('uuid')
+            }
+            if (project.hasProperty("accessToken")) {
+                args '--accessToken', project.property('accessToken')
+            }
+            if (project.hasProperty("username")) {
+                args '--username', project.property('username')
+            }
+            if (project.hasProperty("userType")) {
+                args '--userType', project.property('userType')
+            }
 
             mods {
                 ppmod {

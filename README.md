@@ -44,3 +44,13 @@ Community Documentation: http://mcforge.readthedocs.io/en/latest/gettingstarted/
 LexManos' Install Video: https://www.youtube.com/watch?v=8VEdtQLuLO0  
 Forge Forum: https://forums.minecraftforge.net/  
 Forge Discord: https://discord.gg/UvedJ9m  
+
+
+## auth.ps1
+
+```ps1
+# pip install mojang
+$env:MC_EMAIL="your_email"
+$env:MC_PW="your_password"
+python .\mcauth.py
+```
